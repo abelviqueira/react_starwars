@@ -1,0 +1,35 @@
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    position: relative;
+}
+
+input[type="text"] {
+    background: transparent;
+    border-radius: 25px;
+    border: 2px solid var(--color-primary);
+    padding: 10px 50px 10px 20px;
+    width: auto;
+    min-height: 40px;
+    color: var(--color-primary);
+    min-width: 300px;
+}
+
+input::placeholder {
+    color: var(--color-primary);
+    font-style: italic;
+}
+
+input[type="submit"] {
+    border: none;
+    background-color: var(--color-primary);
+    position: absolute;
+    right: 0;
+    height: 100%;
+    border-radius: 0 25px 25px 0;
+    padding: 0 20px;
+    cursor: pointer;
+    pointer-events: all;
+}

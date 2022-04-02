@@ -1,25 +1,22 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import logo from './images/starwars-logo.png';
+import { Link, Route } from "wouter";
+import stars from './utils/Stars/stars';
+import SearchForm from './components/SearchForm/SearchForm';
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Link to="/">
+          <h1>
+            <img src={logo} className="App-logo" alt="logo" /> 
+          </h1>
+        </Link>
+        <h2>Search the character</h2>
+        <SearchForm />
       </header>
     </div>
   );
 }
-
-export default App;
