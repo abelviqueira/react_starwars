@@ -4,6 +4,7 @@ import logo from './images/starwars-logo.png';
 import { Link, Route } from "wouter";
 import stars from './utils/Stars/stars';
 import SearchForm from './components/SearchForm/SearchForm';
+import ListOfCharacters from './components/listOfCharacters/listOfCharacters';
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         </Link>
         <h2>Search the character</h2>
         <SearchForm />
+        <ListOfCharacters />
       </header>
     </div>
   );
