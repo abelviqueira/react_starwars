@@ -15,7 +15,6 @@ export default function App() {
             <img src={logo} className="App-logo" alt="logo" /> 
           </h1>
         </Link>
-        <h2>Search the character</h2>
         <SearchForm />
         <ListOfCharacters />
       </header>

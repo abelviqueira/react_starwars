@@ -1,7 +1,6 @@
 * {
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
 }
-
 .App {
   text-align: center;
 }
@@ -9,6 +8,10 @@
 .App-logo {
   height: 20vmin;
   pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  
 }
 
 .App-header {
@@ -34,6 +37,7 @@
     transform: rotate(360deg);
   }
 }
+
 i {
   position: absolute;
   top: 0;
@@ -53,6 +57,7 @@ i {
     transform: translateY(calc(100vh + 5px));
   }
 }
+
 ul {
   list-style-type: none;
-}/*# sourceMappingURL=App.css.map */
+}

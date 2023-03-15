@@ -23,7 +23,7 @@ class SearchForm extends React.Component {
       return (
         <form onSubmit={this.handleSubmit}>
           <label>
-            <input type="text" placeholder="Enter the name of a character" value={this.state.value} onChange={this.handleChange} />
+            <input type="text" placeholder="Enter a character's name" value={this.state.value} onChange={this.handleChange} />
           </label>
           <input type="submit" value="Search" />
         </form>

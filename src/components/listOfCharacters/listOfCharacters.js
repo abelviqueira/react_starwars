@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import * as API from '../../services/getCharacters';
+import './listOfCharacters.css'
 
 export default function ListOfCharacters() {
   const [characters, setCharacters] = useState([]);
@@ -13,19 +14,19 @@ export default function ListOfCharacters() {
   }, []);
 
   return (
-    <>
+    <div className='c-characters-list'>
         <h2>List of Characters</h2>
         <ul className="listOfCharacters">
         {loading ? (
-            <div>Loading...</div>
+            <li>Loading...</li>
         ) : (
             characters.map(character => (
-            <li key={character.url}>
+            <li key={character.url} onClick="">
                 <p>{character.name}</p>
             </li>
             ))
         )}
         </ul>
-    </>
+    </div>
   );
 }

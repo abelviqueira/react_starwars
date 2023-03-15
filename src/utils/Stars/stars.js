@@ -1,5 +1,5 @@
 function stars() {
-    let amount = 250; 
+    let amount = 100; 
     let body = document.querySelector('body');
     let i = 0;
     while(i < amount) {
@@ -12,7 +12,7 @@ function stars() {
         drop.style.width = 0.5 + size + 'px';
         drop.style.left = posX + 'px';
         drop.style.animationDelay = delay + 's';
-        drop.style.animationDuration = 1 + duration + 's';
+        drop.style.animationDuration = 3 + duration + 's';
 
         body.appendChild(drop);
         i++; 

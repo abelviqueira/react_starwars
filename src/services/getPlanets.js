@@ -1,8 +1,8 @@
-import {API_URL} from 'services/settings';
+import {SWAPI_API_URL} from 'services/settings';
 
 export async function getAllPlanets () {
     try {
-        const response = await fetch(`${API_URL}/planets/`);
+        const response = await fetch(`${SWAPI_API_URL}/planets/`);
         const data = await response.json();
         return data;
     }
@@ -13,7 +13,7 @@ export async function getAllPlanets () {
 
 export async function getPlanetsByName (id) {
     try {
-        const response = await fetch(`${API_URL}/planets/${id}`);
+        const response = await fetch(`${SWAPI_API_URL}/planets/${id}`);
         const data = await response.json();
         return data;
     }

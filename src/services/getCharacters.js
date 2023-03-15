@@ -1,8 +1,8 @@
-import {API_URL} from './settings';
+import {SWAPI_API_URL} from './settings';
 
 export async function getAllCharacters () {    
     try {
-        const response = await fetch(`${API_URL}/people/`);
+        const response = await fetch(`${SWAPI_API_URL}/people/`);
         const data = await response.json();
         return data;
     }
@@ -13,7 +13,7 @@ export async function getAllCharacters () {
 
 export async function getCharacterByID (id) {
     try {
-        const response = await fetch(`${API_URL}/people/${id}`);
+        const response = await fetch(`${SWAPI_API_URL}/people/${id}`);
         const data = await response.json();
         return data;
     }
