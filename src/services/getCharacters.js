@@ -21,3 +21,14 @@ export async function getCharacterByID (id) {
         console.log(error);
     }   
 }
+
+export async function getCharacterByName (name) {
+    try {
+        const response = await fetch(`${SWAPI_API_URL}/people/?search=${name}`);
+        const data = await response.json();
+        return data;
+    }
+    catch (error) {
+        console.log(error);
+    }   
+}

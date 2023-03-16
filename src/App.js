@@ -3,8 +3,7 @@ import './App.css';
 import logo from './images/starwars-logo.png';
 import { Link, Route } from "wouter";
 import stars from './utils/Stars/stars';
-import SearchForm from './components/SearchForm/SearchForm';
-import ListOfCharacters from './components/listOfCharacters/listOfCharacters';
+import ListOfCharacters from './components/ListOfCharacters/ListOfCharacters';
 
 export default function App() {
   return (
@@ -15,7 +14,6 @@ export default function App() {
             <img src={logo} className="App-logo" alt="logo" /> 
           </h1>
         </Link>
-        <SearchForm />
         <ListOfCharacters />
       </header>
     </div>

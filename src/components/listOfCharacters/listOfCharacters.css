@@ -5,5 +5,8 @@
   margin: 0;
 }
 .c-characters-list ul {
-  margin: 0;
+  margin: 20px 0;
+}
+.c-characters-list__list {
+  margin-top: 100px;
 }/*# sourceMappingURL=listOfCharacters.css.map */
