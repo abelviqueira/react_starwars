@@ -3,7 +3,7 @@ import * as API from '../../services/getCharacters';
 import './ListOfCharacters.css'
 import SearchForm from "../SearchForm/SearchForm";
 import Character from "../Character/Character";
-
+import Popup from "../Popup/Popup";
 
 export default function ListOfCharacters() {
   const [characters, setCharacters] = useState([]);
@@ -25,8 +25,12 @@ export default function ListOfCharacters() {
       .catch(error => console.log(error));
   }, [searchTerm]);
 
-  const handleClick = (character) => {
+  const handleCharacterClick = (character) => {
     setSelectedCharacter(character);
+  };
+
+  const handleClosePopup = () => {
+    setSelectedCharacter(null);
   };
 
   const handleSearch = (searchTerm) => {
@@ -38,13 +42,10 @@ export default function ListOfCharacters() {
       <SearchForm className='c-characters-list__search' handleSearch={handleSearch}></SearchForm>
       <div>
         {selectedCharacter && (
-          <div className='c-characters-list__detail'>
-            <h2>{selectedCharacter.name}</h2>
-            <p>Height: {selectedCharacter.height}</p>
-            <p>Mass: {selectedCharacter.mass}</p>
-            <p>Hair Color: {selectedCharacter.hair_color}</p>
-            <p>Skin Color: {selectedCharacter.skin_color}</p>
-          </div>
+          <Popup
+            character={selectedCharacter}
+            handleClose={handleClosePopup}
+          />
         )}
         <div className='c-characters-list__list'>
           <h2>List of Characters</h2>
@@ -53,7 +54,7 @@ export default function ListOfCharacters() {
                 <li>Loading...</li>
             ) : (
               characters.map(character => (
-                <Character key={character.url} character={character} handleClick={handleClick} />
+                <Character key={character.url} character={character} handleClick={handleCharacterClick}/>
               ))
             )}
           </ul>
